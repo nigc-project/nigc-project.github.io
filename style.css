@@ -1,0 +1,60 @@
+body {
+    background-image: linear-gradient(to right, lightsalmon, salmon)
+}
+h1, h2, p {
+    padding-left: 10px;
+}
+h1 {
+    padding-top: 5px;
+}
+a {
+    color: blue;
+    text-decoration: none;
+    font-size: initial;
+}
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    transition-duration: 0.2s;
+    color: cornflowerblue;
+}
+
+::selection {
+    background-color: yellow;
+    text-shadow: grey 3px 3px 3px;
+}
+blockquote {
+    padding: 5px;
+    background-color: salmon;
+}
+
+.highlight {
+    display: inline-block;
+    color: red;
+    text-decoration: underline;
+}
+
+@keyframes rotate {
+    50% {
+        color: blue;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.highlight:hover {
+    animation: rotate 2s linear infinite;
+}
+
+button {
+    padding: 5px;
+    border-radius: 10px;
+    border-color: lightgrey;
+    background-color: lightgrey;
+    transition-duration: 1s;
+}
+button:hover {
+    background-color: grey;
+}

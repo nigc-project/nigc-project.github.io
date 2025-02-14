@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=stylesheet href="../style.css">
+        <title>Video Explanation</title>
+    </head>
+    <body>
+        <a href="../8th Grade Government Website.html"><-- Home</a>
+        <br><br>
+        <a href="history.html">| History | </a>
+        <a href="duties.html">| Duties | </a>
+        <a href="tribal effect.html">| Effect on Tribes | </a>
+        <a href="video.html">| Video | </a>
+        <a href="essential question.html">| Essential Question | </a>
+        
+        
+        <h2>Video: How a Native American tribe fought government over gambling and won</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RTDl6w5X-7Y?si=-k8naNjZGhnwc68c" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Or, read the article <a href="https://www.azcentral.com/in-depth/news/local/scottsdale/2022/05/20/fort-mcdowell-yavapai-nation-arizona-gambling/9839162002/" target="_blank">here</a>.</p>
+
+        <p>This video is the story of the Fort McDowell Yavapai Nation and their struggle with setting up slot machines after the passage of the Indian Gaming Regulatory Act. They had a fight with the FBI after trucks came to take away the slot machines, which the government asserted were being operated illegally. The tribe resisted and advocated for their sovereignty, setting up physical blockades to prevent the trucks from leaving and marching on Arizona's capitol.</p>
+
+        <figure id=img1>
+            <img src="../images/trucks blocked.webp" width=300>
+            <figcaption>Image #1: Blockades being set up to stop gaming machines from being taken</figcaption>
+        </figure>
+        <figure id=img2 style="display: none">
+            <img src="../images/taken machines.webp" width=300>
+            <figcaption>Image #2: The inside of the gaming facility after the machines were taken</figcaption>
+        </figure>
+        <figure id=img3 style="display: none">
+            <img src="../images/arizona march.webp" width=300>
+            <figcaption>Image #3: The march on the Arizona capitol</figcaption>
+        </figure>
+
+        <button onclick="prevImage()"><-- Previous Image</button>
+        <button onclick="nextImage()">Next Image --></button>
+
+        <script>
+            const imgs = [
+                document.querySelector('#img1'),
+                document.querySelector('#img2'),
+                document.querySelector('#img3'),
+            ]
+            function prevImage() {
+                imgs[counter % 3].style.display = 'none'
+                counter += 2
+                imgs[counter % 3].style.display = ''
+            }
+            function nextImage() {
+                imgs[counter % 3].style.display = 'none'
+                counter++
+                imgs[counter % 3].style.display = ''
+            }
+
+            let counter = 0
+        </script>
+    </body>
+</html>

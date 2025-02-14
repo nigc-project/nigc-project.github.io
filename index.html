@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>National Indian Gaming Commission</title>
+        <link rel=stylesheet href="style.css">
+    </head>
+    <body>
+        <a href="subpages/history.html">| History | </a>
+        <a href="subpages/duties.html">| Duties | </a>
+        <a href="subpages/tribal effect.html">| Effect on Tribes | </a>
+        <a href="subpages/video.html">| Video | </a>
+        <a href="subpages/essential question.html">| Essential Question | </a>
+        
+        <h1>National Indian Gaming Commission</h1>
+        <canvas id=animation width=500 height=300></canvas>
+        
+        <p>The National Indian Gaming Commission regulates Indian Gaming, or gambling on Native American reservations, and was formed in 1988. It is a commission made up of a whole <span class=highlight>three</span> full time members, and several other regional members who manage compliance in different states.</p>
+        <p>The members are:</p>
+        <ul>
+            <li>A chairman, appointed by the U.S. President</li>
+            <li>Two associate members appointed by the Secretary of the Interior</li>
+        </ul>
+
+        <figure>
+            <img src="images/chairman.jpg" height=250>
+            <figcaption>Jonodev Osceola Chaudhuri, former chairman of the commission</figcaption>
+        </figure>
+        
+        <script>
+            const canvas = document.querySelector('#animation')
+            const ctx = canvas.getContext('2d')
+
+            const shrimp = new Image()
+            shrimp.src = "images/NIGC.png"
+            function update() {
+                ctx.clearRect(0, 0, 500, 500)
+                ctx.drawImage(shrimp, (Date.now() % 1500) / 3, Math.sin(Date.now() / 100) * 20 + 50)
+                
+                requestAnimationFrame(update)    
+            }
+            requestAnimationFrame(update)
+        </script>
+    </body>
+</html>
